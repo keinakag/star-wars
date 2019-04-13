@@ -7,14 +7,15 @@ export class Navbar extends React.Component {
 			<nav className="navbar navbar-light bg-light mb-3">
 				<Link to="/">
 					<span className="navbar-brand mb-0 h1">
-						React Webapp Boilerplate
+						<img
+							src="https://cdn.iconscout.com/icon/free/png-256/starwars-5-555964.png"
+							style={{ width: "60px" }}
+						/>
 					</span>
 				</Link>
 				<div className="ml-auto">
 					<Link to="/demo">
-						<button className="btn btn-primary">
-							Check the Context in action
-						</button>
+						<button className="btn btn-primary">Favorites</button>
 					</Link>
 				</div>
 			</nav>

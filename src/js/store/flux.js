@@ -1,16 +1,42 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			demo: [
+			characters: [
 				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
+					name: "",
+					gender: "",
+					hairColor: "",
+					eyeColor: ""
 				},
 				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
+					name: "",
+					gender: "",
+					hairColor: "",
+					eyeColor: ""
+				},
+				{
+					name: "",
+					gender: "",
+					hairColor: "",
+					eyeColor: ""
+				},
+				{
+					name: "",
+					gender: "",
+					hairColor: "",
+					eyeColor: ""
+				},
+				{
+					name: "",
+					gender: "",
+					hairColor: "",
+					eyeColor: ""
+				},
+				{
+					name: "",
+					gender: "",
+					hairColor: "",
+					eyeColor: ""
 				}
 			]
 		},
