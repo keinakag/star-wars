@@ -51,10 +51,23 @@ export class Navbar extends React.Component {
 												href="#">
 												<div className="row">
 													<div className="col">
-														{item}
+														<Link
+															to={
+																"/single/" +
+																index
+															}>
+															{item}
+														</Link>
 													</div>
 													<div className="col">
-														<i className="fas fa-trash" />
+														<i
+															className="fas fa-trash"
+															onClick={() =>
+																actions.remove(
+																	item.name
+																)
+															}
+														/>
 													</div>
 												</div>
 											</a>

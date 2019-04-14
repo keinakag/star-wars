@@ -6,22 +6,38 @@ import { Context } from "../store/appContext.jsx";
 export class Single extends React.Component {
 	render() {
 		return (
-			<div className="jumbotron">
+			<div>
 				<Context.Consumer>
 					{({ store }) => {
 						return (
-							<h1 className="display-4">
-								This will show the demo element:{" "}
-								{
-									store.demo[this.props.match.params.theid]
-										.title
-								}
-							</h1>
+							<div>
+								<div className="row">
+									<div className="col">
+										<img src="https://tinyurl.com/y2ebxe7y" />
+									</div>
+									<div className="col">
+										<h1>
+											{
+												store.characters[
+													this.props.match.params
+														.theid
+												].name
+											}
+										</h1>
+										<h5>
+											{
+												store.characters[
+													this.props.match.params
+														.theid
+												].text
+											}
+										</h5>
+									</div>
+								</div>
+							</div>
 						);
 					}}
 				</Context.Consumer>
-
-				<hr className="my-4" />
 
 				<Link to="/">
 					<span

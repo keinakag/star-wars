@@ -32,7 +32,7 @@ export default class Card extends React.Component {
 											{item.eyeColor}
 										</p>
 
-										<Link to="/learnmore">
+										<Link to={"/single/" + index}>
 											<a className="btn btn-primary">
 												Learn More
 											</a>

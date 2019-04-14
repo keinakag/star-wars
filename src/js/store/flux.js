@@ -3,40 +3,52 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			characters: [
 				{
-					name: "assda",
-					gender: "asfd",
-					hairColor: "asdf",
-					eyeColor: "asdf"
+					name: "Person 1",
+					gender: "P1 Gender",
+					hairColor: "P1 Hair",
+					eyeColor: "P1 Eyes",
+					text:
+						"Person 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
 				},
 				{
-					name: "asf",
-					gender: "ss",
-					hairColor: "dd",
-					eyeColor: "ff"
+					name: "Person 2",
+					gender: "P2 Gender",
+					hairColor: "P2 Hair",
+					eyeColor: "P2 Eyes",
+					text:
+						"Person 2 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "
 				},
 				{
-					name: "xx",
-					gender: "cc",
-					hairColor: "vv",
-					eyeColor: "tt"
+					name: "Person 3",
+					gender: "P3 Gender",
+					hairColor: "P3 Hair",
+					eyeColor: "P3 Eyes",
+					text:
+						"Person 3 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, "
 				},
 				{
-					name: "ghkjgh",
-					gender: "ghjk",
-					hairColor: "ghk",
-					eyeColor: "jgk"
+					name: "Person 4",
+					gender: "P4 Gender",
+					hairColor: "P4 Hair",
+					eyeColor: "P4 Eyes",
+					text:
+						"Person 4 Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, "
 				},
 				{
-					name: "cvb",
-					gender: "xcb",
-					hairColor: "xcvb",
-					eyeColor: "xcvb"
+					name: "Person 5",
+					gender: "P5 Gender",
+					hairColor: "P5 Hair",
+					eyeColor: "P5 Eyes",
+					text:
+						"Person 5 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
 				},
 				{
-					name: "yr",
-					gender: "rty",
-					hairColor: "ryt",
-					eyeColor: "rty"
+					name: "Person 6",
+					gender: "P6 Gender",
+					hairColor: "P6 Hair",
+					eyeColor: "P6 Eyes",
+					text:
+						"Person 6 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'"
 				}
 			],
 
@@ -58,11 +70,26 @@ const getState = ({ getStore, setStore }) => {
 			favorites: name => {
 				const store = getStore();
 				let demo = [];
+				//checks if name already exists in array
 				if (store.favoritesArray.includes(name)) {
+					//true leaves array the same
 					demo = store.favoritesArray;
 				} else {
+					//false pushes new favorite to array
 					demo = store.favoritesArray.push(name);
 				}
+
+				setStore({ favorites: demo });
+			},
+
+			//not functional
+			remove: name => {
+				const store = getStore();
+				const favs = store.favoritesArray;
+				//filters names not equal to name clicked on
+				const demo = favs.filter(function(ele) {
+					return ele !== name;
+				});
 
 				setStore({ favorites: demo });
 			}
