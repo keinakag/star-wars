@@ -57,8 +57,12 @@ const getState = ({ getStore, setStore }) => {
 
 			favorites: name => {
 				const store = getStore();
-
-				const demo = store.favoritesArray.push(name);
+				let demo = [];
+				if (store.favoritesArray.includes(name)) {
+					demo = store.favoritesArray;
+				} else {
+					demo = store.favoritesArray.push(name);
+				}
 
 				setStore({ favorites: demo });
 			}
