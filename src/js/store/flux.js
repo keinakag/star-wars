@@ -3,57 +3,64 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			characters: [
 				{
-					name: "",
-					gender: "",
-					hairColor: "",
-					eyeColor: ""
+					name: "assda",
+					gender: "asfd",
+					hairColor: "asdf",
+					eyeColor: "asdf"
 				},
 				{
-					name: "",
-					gender: "",
-					hairColor: "",
-					eyeColor: ""
+					name: "asf",
+					gender: "ss",
+					hairColor: "dd",
+					eyeColor: "ff"
 				},
 				{
-					name: "",
-					gender: "",
-					hairColor: "",
-					eyeColor: ""
+					name: "xx",
+					gender: "cc",
+					hairColor: "vv",
+					eyeColor: "tt"
 				},
 				{
-					name: "",
-					gender: "",
-					hairColor: "",
-					eyeColor: ""
+					name: "ghkjgh",
+					gender: "ghjk",
+					hairColor: "ghk",
+					eyeColor: "jgk"
 				},
 				{
-					name: "",
-					gender: "",
-					hairColor: "",
-					eyeColor: ""
+					name: "cvb",
+					gender: "xcb",
+					hairColor: "xcvb",
+					eyeColor: "xcvb"
 				},
 				{
-					name: "",
-					gender: "",
-					hairColor: "",
-					eyeColor: ""
+					name: "yr",
+					gender: "rty",
+					hairColor: "ryt",
+					eyeColor: "rty"
 				}
-			]
+			],
+
+			favoritesArray: []
 		},
 		actions: {
-			changeColor: (index, color) => {
+			changeCard: item => {
 				//get the store
 				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
+				const demo = store.characters.map(item => {
+					return item;
 				});
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			favorites: name => {
+				const store = getStore();
+
+				const demo = store.favoritesArray.push(name);
+
+				setStore({ favorites: demo });
 			}
 		}
 	};

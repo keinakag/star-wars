@@ -1,7 +1,12 @@
 import React from "react";
+import InsideCard from "../component/InsideCard.jsx";
 
-const LearnMore = () => {
-	return <div>lskfjgd</div>;
-};
-
-export default LearnMore;
+export class LearnMore extends React.Component {
+	render() {
+		return (
+			<div className="container">
+				<InsideCard />
+			</div>
+		);
+	}
+}
