@@ -49,7 +49,14 @@ export class Navbar extends React.Component {
 												key={index}
 												className="dropdown-item"
 												href="#">
-												{item}
+												<div className="row">
+													<div className="col">
+														{item}
+													</div>
+													<div className="col">
+														<i className="fas fa-trash" />
+													</div>
+												</div>
 											</a>
 										);
 									}
