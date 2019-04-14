@@ -9,7 +9,10 @@ export class Home extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<Card />
+				<h1>Characters</h1>
+				<div className="row">
+					<Card />
+				</div>
 			</div>
 		);
 	}
