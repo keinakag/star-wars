@@ -15,15 +15,21 @@ export class Navbar extends React.Component {
 					</span>
 				</Link>
 				<div className="dropdown">
-					<button
-						className="btn btn-secondary dropdown-toggle"
-						type="button"
-						id="dropdownMenuButton"
-						data-toggle="dropdown"
-						aria-haspopup="true"
-						aria-expanded="false">
-						Dropdown button
-					</button>
+					<Context.Consumer>
+						{({ store, actions }) => {
+							return (
+								<button
+									className="btn btn-secondary dropdown-toggle"
+									type="button"
+									id="dropdownMenuButton"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false">
+									Favorites ({store.favoritesArray.length})
+								</button>
+							);
+						}}
+					</Context.Consumer>
 					<div
 						className="dropdown-menu"
 						aria-labelledby="dropdownMenuButton">
