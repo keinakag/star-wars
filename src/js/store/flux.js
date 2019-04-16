@@ -120,12 +120,19 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ demo: demo });
 			},
 
-			favorites: (name, index) => {
+			favorites: name => {
 				const store = getStore();
+				let demo = [];
+				//checks if name already exists in array
+				if (store.favoritesArray.includes(name)) {
+					//true leaves array the same
+					demo = store.favoritesArray;
+				} else {
+					//false pushes new favorite to array
+					demo = store.favoritesArray.push(name);
+				}
 
-				const demo = store.favoritesArray.push(name);
-
-				setStore({ demo: demo });
+				setStore({ favorites: demo });
 			},
 
 			deleteFav: i => {
