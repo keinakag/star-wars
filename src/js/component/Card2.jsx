@@ -13,8 +13,8 @@ export default class Card2 extends React.Component {
 				{({ store, actions }) => {
 					return store.planets.map((item, index) => {
 						return (
-							<div className="col" key={index}>
-								<div className="card">
+							<div className="col h-100" key={index}>
+								<div className="card h-100">
 									<img
 										src="http://placehold.it/500x325"
 										className="card-img-top"
@@ -38,7 +38,7 @@ export default class Card2 extends React.Component {
 										</p>
 
 										<Link to={"/single2/" + index}>
-											<a className="btn btn-primary">
+											<a className="btn btn-outline-primary">
 												Learn More
 											</a>
 										</Link>

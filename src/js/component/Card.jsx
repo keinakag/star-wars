@@ -13,8 +13,8 @@ export default class Card extends React.Component {
 				{({ store, actions }) => {
 					return store.characters.map((item, index) => {
 						return (
-							<div className="col" key={index}>
-								<div className="card">
+							<div className="col h-100 p-3" key={index}>
+								<div className="card h-100">
 									<img
 										src="http://placehold.it/500x325"
 										className="card-img-top"
@@ -25,15 +25,20 @@ export default class Card extends React.Component {
 											{item.name}
 										</h5>
 										<p className="card-text">
-											{item.gender}
+											Gender:
+											{" " + item.gender}
 											<br />
-											{item.hairColor}
 											<br />
-											{item.eyeColor}
+											Hair Color:
+											{" " + item.hairColor}
+											<br />
+											<br />
+											Eye Color:
+											{" " + item.eyeColor}
 										</p>
 
 										<Link to={"/single/" + index}>
-											<a className="btn btn-primary">
+											<a className="btn btn-outline-primary">
 												Learn More
 											</a>
 										</Link>

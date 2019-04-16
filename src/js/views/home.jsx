@@ -8,7 +8,7 @@ import "../../styles/home.css";
 export class Home extends React.Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="container-fluid">
 				<h1>Characters</h1>
 				<div className="row">
 					<Card />

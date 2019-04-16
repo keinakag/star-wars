@@ -90,7 +90,7 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "Coruscant",
 					orbital_period: "304",
-					population: "2480000000",
+					population: "2480000",
 					climate: "Temperate",
 					text:
 						"Person 5 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
