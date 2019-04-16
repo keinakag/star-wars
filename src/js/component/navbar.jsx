@@ -49,27 +49,14 @@ export class Navbar extends React.Component {
 												key={index}
 												className="dropdown-item"
 												href="#">
-												<div className="row">
-													<div className="col">
-														<Link
-															to={
-																"/single/" +
-																index
-															}>
-															{item}
-														</Link>
-													</div>
-													<div className="col">
-														<i
-															className="fas fa-trash"
-															onClick={() =>
-																actions.remove(
-																	item.name
-																)
-															}
-														/>
-													</div>
-												</div>
+												{item}
+												<button
+													onClick={() =>
+														actions.deleteFav(index)
+													}
+													className="float-right  btn btn-danger">
+													<i className="fas fa-trash-alt" />
+												</button>
 											</a>
 										);
 									}
