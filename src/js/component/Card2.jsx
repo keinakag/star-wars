@@ -33,8 +33,8 @@ export default class Card2 extends React.Component {
 											{" " + item.climate}
 											<br />
 											<br />
-											Orbital Period:
-											{" " + item.orbital_period}
+											Diameter:
+											{" " + item.diameter}
 										</p>
 
 										<Link to={"/single2/" + index}>

@@ -30,11 +30,11 @@ export default class Card extends React.Component {
 											<br />
 											<br />
 											Hair Color:
-											{" " + item.hairColor}
+											{" " + item.hair_color}
 											<br />
 											<br />
 											Eye Color:
-											{" " + item.eyeColor}
+											{" " + item.eye_color}
 										</p>
 
 										<Link to={"/single/" + index}>
