@@ -13,8 +13,8 @@ export default class Card extends React.Component {
 				{({ store, actions }) => {
 					return store.characters.map((item, index) => {
 						return (
-							<div className="col h-100 p-3" key={index}>
-								<div className="card h-100">
+							<div className="col-3" key={index}>
+								<div className="card w-100 p-3 h-100 p-3">
 									<img
 										src="http://placehold.it/500x325"
 										className="card-img-top"

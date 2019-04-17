@@ -23,7 +23,6 @@ const injectStore = PassedComponent => {
 					let { store } = this.state;
 					store.planets = data.results;
 					this.setState({ store });
-					console.log(data);
 				})
 
 				.catch(function(err) {
