@@ -23,11 +23,11 @@ const injectStore = PassedComponent => {
 					let { store } = this.state;
 					store.planets = data.results;
 					this.setState({ store });
-				})
-
-				.catch(function(err) {
-					console.log("Fetch Error :-S", err);
 				});
+
+			// .catch(function(err) {
+			// 	console.log("Fetch Error :-S", err);
+			// });
 
 			fetch("https://swapi.co/api/people")
 				.then(response => response.json())
@@ -35,12 +35,11 @@ const injectStore = PassedComponent => {
 					let { store } = this.state;
 					store.characters = data.results;
 					this.setState({ store });
-					// console.log(data);
-				})
-
-				.catch(function(err) {
-					console.log("Fetch Error :-S", err);
 				});
+
+			// .catch(function(err) {
+			// 	console.log("Fetch Error :-S", err);
+			// });
 		}
 
 		render() {
@@ -53,5 +52,4 @@ const injectStore = PassedComponent => {
 	}
 	return StoreWrapper;
 };
-
 export default injectStore;
